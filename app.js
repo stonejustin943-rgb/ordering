@@ -182,7 +182,7 @@ async function submitOrder(){
 }
 
 async function init(){
-  const res=await fetch(`catalog.json?v=${Date.now()}`, {cache:"no-store"});
+  const res=await const res = await fetch(`./catalog.json?v=${Date.now()}`, { cache:"no-store" });
   DATA=await res.json();
 
   const m=DATA.meta||{};
