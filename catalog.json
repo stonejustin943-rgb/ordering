@@ -7,7 +7,7 @@
     "paymentEmails": [
       "newfoundlug@gmail.com"
     ],
-    "submitEndpoint": "https://script.google.com/macros/s/AKfycby0XkuatO1CmoHmOusRi_RVr9DfFo3LgIKFy2TeAWsrS5Hdfq61myjLiwzi9lbg-Eks/exec",
+    "submitEndpoint": "https://script.google.com/macros/s/AKfycbzGcSb5j_UKKMJTNEf2pYZgo-1osP3AGtf6tTWEmwy420tciupvvqd3R3RE-aZcxKryVw/exec",
     "imageNote": "Images are placeholders in this build. Each card has a BrickLink lookup link by Element ID.",
     "buildVersion": "20260131031054",
     "qtyRuleNote": "qtyStep = 1 if priceEur >= 1.35 else 25"
