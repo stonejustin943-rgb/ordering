@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NewfoundLUG Bulk Order</title>
+  <link rel="stylesheet" href="styles.css?v=20260131031054" />
+</head>
+<body>
+<header class="wrap header">
+  <div class="title">
+    <h1>NewfoundLUG Bulk Order</h1>
+    <p class="muted" id="metaLine">Loading catalog…</p>
+  </div>
+  <div class="paybox">
+    <div class="paylabel">E-transfer to</div>
+    <div class="payemail" id="payEmail">newfoundlug@gmail.com</div>
+    <div class="payhint muted">Include your name in the e-transfer note.</div>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <aside class="panel card">
+    <h2>Your info</h2>
+    <label>Name<input id="name" placeholder="Justin Stone" autocomplete="name"/></label>
+    <label>Email<input id="email" placeholder="you@email.com" autocomplete="email"/></label>
+
+    <div class="divider"></div>
+
+    <h2>Totals</h2>
+    <div class="totals">
+      <div><span class="muted">Subtotal (CAD)</span><span id="subtotal" class="money">$0.00</span></div>
+      <div><span class="muted">Shipping</span><span id="shipping" class="money">$0.00</span></div>
+      <div class="big"><span>Total (CAD)</span><span id="total" class="money">$0.00</span></div>
+      <div><span class="muted">Remaining</span><span id="remaining" class="money">$0.00</span></div>
+    </div>
+    <p id="limitWarning" class="warning hidden">Over the spend limit — reduce your cart.</p>
+
+    <div class="divider"></div>
+
+    <h2>Actions</h2>
+    <div class="actions">
+      <button id="exportCsv">Export CSV</button>
+      <button id="clearCart" class="ghost">Clear cart</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Submit</h2>
+    <p class="muted">Submit writes your order into Google Sheets (one tab per person).</p>
+    <button id="submitOrder" class="primary">Submit</button>
+    <p id="submitMsg" class="muted"></p>
+
+    <div class="divider"></div>
+    <details class="muted">
+      <summary>Help</summary>
+      <ul>
+        <li>Most items are ordered in steps of 25.</li>
+        <li>Items priced at €1.35 are ordered in steps of 1.</li>
+        <li>Spend limit is enforced on total CAD (incl. shipping).</li>
+      </ul>
+    </details>
+  </aside>
+
+  <section class="catalog">
+    <div class="catalogbar">
+      <div class="left">
+        <h2>Catalog</h2>
+        <span class="badge" id="countBadge">0 items</span>
+      </div>
+      <input id="search" class="search" placeholder="Search element, name, color, group…" />
+    </div>
+    <div id="items" class="items"></div>
+  </section>
+</main>
+
+<footer class="wrap footer muted">
+  <span>Build 20260131031054</span>
+</footer>
+
+<script src="app.js?v=20260131031054"></script>
+</body>
+</html>
